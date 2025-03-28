@@ -1,0 +1,56 @@
+version: "3.1"
+
+intents:
+  
+  - checkout 
+  - checkin
+  - make_reservation
+  - cancel_reservation
+
+entities:
+  - guest_name
+  - room_number
+  - reservation_id
+
+slots:
+  guest_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: guest_name
+
+  room_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: room_number
+
+  reservation_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: reservation_id
+        
+actions:
+  - action_check_in
+  - action_check_out
+
+responses:
+  utter_iamabot:
+    - text: "I am a hotel administration chatbot, here to assist with check-ins, checkouts, and reservations!"
+  
+  utter_checkout:
+    - text: 'Checking out the user!'
+  
+  utter_goodbye:
+    - text: 'Thank you for using it!'
+  
+  utter_checkin:
+    - text: 'Checking in the user!'
+ 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

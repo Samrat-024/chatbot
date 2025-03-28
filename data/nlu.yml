@@ -1,0 +1,41 @@
+version: "3.1"
+
+nlu:
+
+- intent: checkout
+  examples: |
+    - Check out [John Doe](guest_name) from room [105](room_number)
+    - The guest in room [210](room_number) wants to check out
+    - Room [501](room_number) needs to be checked out
+    - Checkout room [140](room_number)
+    - Please check out room [203](room_number)
+    - I want to check out the guest from room [312](room_number)
+    - Check out [Samrat](guest_name) from room [102](room_number)
+    - Guest in room [305B](room_number) wants to check out
+
+- intent: checkin  
+  examples: | 
+    - Check in [John Doe](guest_name) to room [101](room_number)
+    - I want to check in [Alice](guest_name) in room [202](room_number)
+    - Please check in [Michael Smith](guest_name) in room [303](room_number)
+    - Check in [Robert](guest_name) to room [404](room_number)
+    - Guest [Emma](guest_name) needs to be checked in to room [505](room_number)
+    - Assign room [606](room_number) to [David](guest_name)
+
+- intent: make_reservation
+  examples: | 
+    - Book a room for [John Doe](guest_name) in room [305](room_number)
+    - Reserve a suite for [Sophia](guest_name)
+    - I need a reservation for [Emily](guest_name) in room [402](room_number)
+    - Can you reserve a room for [William](guest_name) in room [707](room_number)?
+    - I'd like to make a reservation for [Olivia](guest_name) in room [808](room_number)
+    - Secure room [909](room_number) for [Daniel](guest_name)
+
+- intent: cancel_reservation
+  examples: | 
+    - Cancel reservation for [James Miller](guest_name)
+    - I want to cancel the reservation for [Sophia](guest_name)
+    - Cancel booking for [Liam](guest_name)
+    - Cancel reservation for room [508](room_number)
+    - I want to cancel booking in room [303](room_number)
+    - The guest in room [410](room_number) wants to cancel their reservation

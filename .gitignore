@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment (should not be committed)
+venv/
+.env/
+.venv/
+env/
+myenv
+
+# Rasa logs and temporary files
+logs/
+*.log
+*.db
+*.db-shm
+*.db-wal
+rasa_core.log
+rasa_core.debug.log
+
+# Ignore trained models and the .rasa folder
+models/
+.rasa/
+
+# Pip dependencies metadata
+*.egg-info/
+pip-log.txt
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node modules (if using frontend UI)
+node_modules/
+
+# Docker and deployment overrides
+docker-compose.override.yml
